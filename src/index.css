@@ -1,0 +1,55 @@
+@import url('../src/style/common.css');
+
+:root {
+  --font-family-primary: 'Roboto', serif;
+  --font-family-secondary: 'PT Sans', sans-serif;
+  --font-family-paragraph: "Roboto", sans-serif;
+
+  --font-size-heading: 40px;
+  --font-size-heading-1: 32px;
+  --font-size-heading-2: 26px;
+  --font-size-heading-3: 20px;
+  --font-size-heading-4: 16px;
+
+  --font-size-paragraph: 18px;
+  --line-height-title: 1.4;
+  --font-size-caption: 14px;
+  --line-height-caption: 1.2;
+
+  --color-text: #222022;
+  --color-light: #dadada;
+  --color-highlight-primary: #FFEF7E;
+  --color-highlight-secondary: #B7F9E9;
+  --border-radius-primary: 32px;
+  --border-radius-small: 15px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  /* text-decoration: none; */
+  color: rgb(8, 177, 50);
+}
