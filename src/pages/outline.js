@@ -6,6 +6,14 @@ const Outline = () => {
 
     const topics = [
         {
+            title: 'Event Bubbling',
+            url: "/event-bubbling",
+        },
+        {
+            title: 'Event Capturing',
+            url: "/event-capturing",
+        },
+        {
             title: 'React Hooks',
             url: "/hooks",
             subTopics: [
@@ -22,7 +30,6 @@ const Outline = () => {
         {
             title: 'Pure Component',
             url: "/pure-component",
-            
         }
     ]
     return (

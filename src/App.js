@@ -9,6 +9,8 @@ import PureComponentTopic from "./pages/PureComponentTopic";
 import UseCallbackExample1 from "./pages/hooks/use-callback/examples/example1";
 import UseCallbackExample2 from "./pages/hooks/use-callback/examples/example2";
 import PureCompExample from "./pages/PureComponentTopic/examples/PureCompExample";
+import EventCapturingTopic from "./pages/EventCapturing";
+import EventBublingTopic from "./pages/EventCapturing";
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Outline />} >
+          <Route path="/event-capturing" element={<EventCapturingTopic />} />
+
+          <Route path="/event-bubling" element={<EventBublingTopic />} />
+
           <Route path="/pure-component" element={<PureComponentTopic />}>
             <Route path="examples" element={<ExampleContainer />} >
               <Route path="ex1" element={<PureCompExample />} />

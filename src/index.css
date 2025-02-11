@@ -44,6 +44,18 @@ code {
     monospace;
 }
 
+.code_example {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  margin-block: 10px;
+  white-space: pre-wrap;
+  /* Ensures line breaks are preserved */
+  font-family: monospace;
+  /* Uses a coding-friendly font */
+}
+
+
 a {
   text-decoration: none;
   color: black;
