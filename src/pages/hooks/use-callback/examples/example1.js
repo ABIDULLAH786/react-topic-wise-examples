@@ -1,9 +1,10 @@
 import React, { useState, useCallback, useEffect, memo } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function UseCallbackExample1() {
     const [number, setNumber] = useState(1);
     const [dark, setDark] = useState(false);
-
+    const navigation = useNavigate()
     const getItems = useCallback(() => {
         console.log("In getItems")
         return [number, number + 1, number + 2];
@@ -15,17 +16,23 @@ export default function UseCallbackExample1() {
     };
 
     return (
-        <div style={theme}>
-            <input
-                type="number"
-                value={number}
-                onChange={(e) => setNumber(parseInt(e.target.value))}
-            />
-            <button onClick={() => setDark((prevDark) => !prevDark)}>
-                Toggle theme
-            </button>
-            <List getItems={getItems} />
-        </div>
+        <>
+            <div style={{ display: 'flex', justifyContent: 'space-between', }}>
+                <h5></h5>
+                <p style={{ cursor: 'pointer' }} onClick={() => navigation(-1)}>X</p>
+            </div>
+            <div style={theme}>
+                <input
+                    type="number"
+                    value={number}
+                    onChange={(e) => setNumber(parseInt(e.target.value))}
+                />
+                <button onClick={() => setDark((prevDark) => !prevDark)}>
+                    Toggle theme
+                </button>
+                <List getItems={getItems} />
+            </div>
+        </>
     );
 }
 

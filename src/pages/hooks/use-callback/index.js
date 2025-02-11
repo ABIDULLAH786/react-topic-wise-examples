@@ -1,11 +1,12 @@
 import React from 'react'
-import SubTitleHeading from '../../../components/SubTitleHeading'
+import SubTopicHeading from '../../../components/SubTopicHeading'
 import { Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 function UseCallback() {
     return (
         <div>
-            <SubTitleHeading title={'useCallback'} />
+            <SubTopicHeading title={'useCallback'} />
 
             <div>
                 <div>
@@ -29,14 +30,16 @@ function UseCallback() {
 
                 </div>
                 <div>
-                    <Link to={'/examples/use-callback-example1'} className='example_url'>Click here for useCallback example</Link>
+                    <Link to={'examples/ex1'} className='example_url'>Click here for useCallback example</Link>
                 </div>
+               
                 <div>
-                    <Link to={'/examples/use-callback-example2'} className='example_url'>Click here for without useCallback example</Link>
+                    <Link to={'examples/ex2'} className='example_url'>Click here for useCallback example with real scenario</Link>
                 </div>
-                <div>
-                    <Link to={'/examples/use-callback-example3'} className='example_url'>Click here for useCallback example with real scenario</Link>
-                </div>
+            </div>
+
+            <div style={{marginTop:'10px'}}>
+                <Outlet />
             </div>
         </div>
     )

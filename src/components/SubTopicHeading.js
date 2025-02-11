@@ -1,9 +1,9 @@
 import React from 'react'
 
-function SubTitleHeading({title}) {
+function SubTopicHeading({title}) {
   return (
     <div className='sub_topic_title'>{title}</div>
   )
 }
 
-export default SubTitleHeading
+export default SubTopicHeading

@@ -1,4 +1,5 @@
 import { memo, useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const allUsers = [
     'john',
@@ -11,7 +12,7 @@ const allUsers = [
 
 export default function UseCallbackExample3() {
     const [users, setUsers] = useState(allUsers);
-
+    const navigation = useNavigate()
     const handleSearch = useCallback((text) => {
         const filteredUsers = allUsers.filter((user) =>
             user.includes(text),
@@ -21,6 +22,10 @@ export default function UseCallbackExample3() {
 
     return (
         <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', }}>
+                <h5></h5>
+                <p style={{ cursor: 'pointer' }} onClick={() => navigation(-1)}>X</p>
+            </div>
             <div>
                 <button onClick={() => setUsers(shuffle(allUsers))}>
                     Shuffle

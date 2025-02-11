@@ -18,6 +18,11 @@ const Outline = () => {
                     url: "use-callback"
                 },
             ]
+        },
+        {
+            title: 'Pure Component',
+            url: "/pure-component",
+            
         }
     ]
     return (
